@@ -1,0 +1,23 @@
+// COLORS
+$color-neutral-1: hsl(0, 0%, 98%);
+$color-neutral-2: hsl(0, 0%, 41%);
+$color-neutral-3: hsl(0, 0%, 8%);
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: "Epilogue", sans-serif;
+	font-size: 62.5%;
+	line-height: 1;
+}
+
+body {
+	font-size: 1.8rem;
+}
