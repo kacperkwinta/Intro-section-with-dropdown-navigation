@@ -3,6 +3,13 @@ $color-neutral-1: hsl(0, 0%, 98%);
 $color-neutral-2: hsl(0, 0%, 41%);
 $color-neutral-3: hsl(0, 0%, 8%);
 
+// DISPLAY FLEX
+@mixin displayFlex($positionX, $positionY) {
+	display: flex;
+	justify-content: $positionX;
+	align-items: $positionY;
+}
+
 *,
 *::after,
 *::before {
@@ -15,9 +22,106 @@ html {
 	box-sizing: border-box;
 	font-family: "Epilogue", sans-serif;
 	font-size: 62.5%;
-	line-height: 1;
 }
 
 body {
 	font-size: 1.8rem;
 }
+
+main {
+	margin: 4.8rem;
+	@include displayFlex(space-evenly, center);
+	gap: 4.8rem;
+}
+
+// NAVIGATION
+header {
+	padding: 3.2rem;
+	@include displayFlex(space-between, center);
+
+	.wrapper-links,
+	.wrapper-account {
+		@include displayFlex(center, center);
+		gap: 4.8rem;
+	}
+}
+
+// TYPOGRAPHY
+.header-1 {
+	font-size: 7.2rem;
+}
+
+.link {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		color: $color-neutral-2;
+		transition: all 0.2s ease;
+	}
+
+	&:hover,
+	&:active {
+		color: $color-neutral-3;
+	}
+
+	&--rounded {
+		padding: 1.2rem 2.4rem;
+		border-radius: 1.4rem;
+		border: 1px solid $color-neutral-2;
+
+		&:hover {
+			color: $color-neutral-3;
+			border: 1px solid currentColor;
+		}
+	}
+}
+
+// CALL TO ACTION
+.cta-text {
+	max-width: 55rem;
+	@include displayFlex(center, center);
+	flex-direction: column;
+	gap: 4.8rem;
+}
+
+.link--cta {
+	color: $color-neutral-1;
+	background-color: $color-neutral-3;
+	color: $color-neutral-1 !important;
+	border-radius: 1.6rem;
+	padding: 2rem 3.2rem;
+	font-weight: 700;
+	border: 1px solid $color-neutral-3;
+	transition: all 0.2s ease;
+	align-self: flex-start;
+
+	&:hover {
+		background-color: $color-neutral-1;
+		color: $color-neutral-3 !important;
+	}
+}
+
+.cta-desc {
+	color: $color-neutral-2;
+	line-height: 1.4;
+}
+
+.wrapper-testimonials {
+	@include displayFlex(flex-start, center);
+	gap: 4.8rem;
+}
+
+.cta-img {
+	flex-basis: content;
+
+	img {
+		display: block;
+		max-width: 55rem;
+	}
+}
+
+// SPACING SYSTEM (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+// FONT SIZE SYSTEM (px)
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98

@@ -16,27 +16,62 @@
 			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
 			rel="stylesheet"
 		/>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css">
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Frontend Mentor | Intro section with dropdown navigation</title>
 	</head>
 	<body>
+		<header>
+			<div class="wrapper-links">
+				<img src="images/logo.svg" alt="" class="logo" />
+				<a href="#" class="link">Features</a>
+				<a href="#" class="link">Company</a>
+				<a href="#" class="link">Careers</a>
+				<a href="#" class="link">About</a>
+			</div>
 
-    <img src="" alt="">
-		<!-- Features
-  Company
-  Careers
-  About
+			<div class="wrapper-account">
+				<a href="#" class="link">Login</a>
+				<a href="#" class="link link--rounded">Register</a>
+			</div>
+		</header>
 
-  Login
-  Register
+		<main>
 
-  Make remote work
+			<div class="cta-text">
+				<h1 class="header-1">Make remote work</h1>
+				<p class="cta-desc">
+					Get your team in sync, no matter your location. Streamline processes,
+					create team rituals, and watch productivity soar.
+				</p>
+				<a href="#" class="link link--cta">Learn more</a>
+				<div class="wrapper-testimonials">
+					<img src="images/client-databiz.svg" class="testimonial-img" alt="" />
+					<img
+						src="images/client-audiophile.svg"
+						class="testimonial-img"
+						alt=""
+					/>
+					<img src="images/client-meet.svg" class="testimonial-img" alt="" />
+					<img src="images/client-maker.svg" class="testimonial-img" alt="" />
+				</div>
+			</div>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+			<div class="cta-img">
+				<picture class="animation-hidden">
+					<!-- below 400px -->
+					<source
+						media="(max-width: 26.5625em)"
+						srcset="images/image-hero-mobile.png"
+					/>
+					<img src="images/image-hero-desktop.png" alt="" />
+				</picture>
+			</div>
+			
+		</main>
 
-  Learn more
+		<!-- 
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
