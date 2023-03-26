@@ -33,3 +33,16 @@ dropdowns.forEach(function (dropdown) {
 		dropdownMenu.classList.toggle("active");
 	});
 });
+
+// mobile menu toggle
+const btnMenu = document.querySelector(".btn-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenuIconOpen = document.querySelector(".icon-menu-open");
+const mobileMenuIconClose = document.querySelector(".icon-menu-close");
+
+btnMenu.addEventListener("click", function () {
+	mobileMenu.classList.toggle("mobile-menu--active");
+	mobileMenu.classList.toggle("mobile-menu--hidden");
+	mobileMenuIconOpen.classList.toggle("hidden");
+	mobileMenuIconClose.classList.toggle("hidden");
+});
